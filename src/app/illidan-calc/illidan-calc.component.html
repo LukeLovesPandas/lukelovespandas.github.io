@@ -1,0 +1,72 @@
+<form #calcForm="ngForm">
+  <h1>Attacks</h1>
+  <h2>{{attackString}}</h2>
+  <h1>Damage</h1>
+  <h2>{{damageString}}</h2>
+  
+  <h3>Stats</h3>
+  <div>
+    <label>STR</label>
+    <input type="text" name="str" id="str" #str="ngModel" [(ngModel)]="model.str">
+  </div>
+  <div>
+    <label>DEX</label>
+    <input type="text" name="dex" id="dex" #dex="ngModel" [(ngModel)]="model.dex">
+  </div>
+  <div>
+    <label>CON</label>
+    <input type="text" name="con" id="con" #con="ngModel" [(ngModel)]="model.con">
+  </div>
+  <div>
+    <label>WIS</label>
+    <input type="text" name="wis" id="wis" #wis="ngModel" [(ngModel)]="model.wis">
+  </div>
+  <div>
+    <label>INT</label>
+    <input type="text" name="int" id="int" #int="ngModel" [(ngModel)]="model.int">
+  </div>
+  <div>
+    <label>CHA</label>
+    <input type="text" name="cha" id="cha" #cha="ngModel" [(ngModel)]="model.cha">
+  </div>
+  <div>
+    <label>BAB</label>
+    <input type="text" name="BAB" id="BAB" #BAB="ngModel" [(ngModel)]="model.BAB">
+  </div>
+
+
+  <h3>Toggled Mods</h3>
+  <div>
+    <button [ngClass]="{'red': model.powerAttack}" (click)="toggle('powerAttack')">Power Attack</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.spellCombat}" (click)="toggle('spellCombat')">Spell Combat</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.twoWeaponFighting}" (click)="toggle('twoWeaponFighting')">Two Weapon Fighting</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.fightingDefensively}" (click)="toggle('fightingDefensively')">Fighting Defensively</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.arcaneAccuracy}" (click)="toggle('arcaneAccuracy')">Arcane Accuracy</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.arcanePoolWeapon}" (click)="toggle('arcanePoolWeapon')">Arcane Pool Weapon Charge</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.greaterMagicWeapon}" (click)="toggle('greaterMagicWeapon')">Greater Magic Weapon</button>
+  </div>
+  <div>
+    <button>Int To Damage</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.gargoyleMode}" (click)="toggle('gargoyleMode')">Gargoyle Mode</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.bladedDash}" (click)="toggle('bladedDash')">Bladed Dash</button>
+  </div>
+  <div>
+    <button [ngClass]="{'red': model.haste}" (click)="toggle('haste')">Haste</button>
+  </div>
+</form>
